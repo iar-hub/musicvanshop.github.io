@@ -21,70 +21,56 @@
       box-sizing: border-box;
     }
 
-    body {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: var(--mv-cream);
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      color: var(--mv-charcoal);
-      position: relative;
-      overflow: hidden;
-    }
+  body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--mv-cream);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: var(--mv-charcoal);
+  position: relative;
+  overflow: hidden;
+}
 
-    /* --- Subtle film grain overlay --- */
-    body::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: var(--mv-grain);
-      pointer-events: none;
-      mix-blend-mode: multiply;
-    }
+.frame {
+  border: 10px solid var(--mv-orange);
+  padding: 8vh 10vw;
+  text-align: center;
+  background: white;
+  box-shadow: 0 0 80px rgba(0,0,0,0.1);
+  width: 90vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-    /* --- Retro frame --- */
-    .frame {
-      border: 8px solid var(--mv-orange);
-      padding: 6vw 8vw;
-      text-align: center;
-      background: white;
-      box-shadow: 0 0 60px rgba(0,0,0,0.08);
-      position: relative;
-      max-width: 900px;
-      width: 80%;
-    }
+.logo {
+  max-width: 500px;
+  width: 45vw;
+  margin-bottom: 40px;
+  opacity: 0.95;
+}
 
-    /* --- Logo --- */
-    .logo {
-      max-width: 400px;
-      width: 40vw;
-      margin-bottom: 40px;
-      opacity: 0.95;
-    }
+.tagline {
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mv-orange);
+  margin-top: 20px;
+}
 
-    /* --- Retro tagline --- */
-    .tagline {
-      font-size: 1.1rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--mv-orange);
-      margin-top: 10px;
-    }
+.footer {
+  position: absolute;
+  bottom: 20px;
+  font-size: 0.8rem;
+  opacity: 0.6;
+  letter-spacing: 0.05em;
+}
 
-    /* --- Footer strip --- */
-    .footer {
-      position: absolute;
-      bottom: 30px;
-      font-size: 0.75rem;
-      opacity: 0.6;
-      letter-spacing: 0.05em;
-    }
-
-    @media (min-width: 1200px) {
-      .logo {
-      max-width: 500px;
-      }
 }
   </style>
 </head>
